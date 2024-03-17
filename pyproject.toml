@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "ai-rag-chat-evaluator"
-version = "0.1.0"
+version = "0.2.0"
 description = "Tools for evaluation of RAG Chat Apps using Azure AI Evaluate SDK and OpenAI"
 authors = ["Pamela Fox <pamelafox@fosstodon.org>"]
 maintainers = ["Oleksis Fraga <oleksis.fraga@gmail.com>"]
@@ -22,7 +22,7 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 textual = "*"
 typer = "*"
 requests = "*"
