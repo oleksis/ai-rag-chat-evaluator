@@ -1,3 +1,43 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "ai-rag-chat-evaluator"
+version = "0.1.0"
+description = "Tools for evaluation of RAG Chat Apps using Azure AI Evaluate SDK and OpenAI"
+authors = ["Pamela Fox <pamelafox@fosstodon.org>"]
+maintainers = ["Oleksis Fraga <oleksis.fraga@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/Azure-Samples/ai-rag-chat-evaluator"
+keywords = ["ai", "rag", "chat", "azure", "sdk", "openai"]
+classifiers = [
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+packages = [
+    { include = "scripts/**/*.py" },
+    { include = "review_tools/*.py" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+textual = "*"
+typer = "*"
+requests = "*"
+python-dotenv = "*"
+azure-ai-generative = { version = "1.0.0b7", extras = ["evaluate"] }
+azure-search-documents = "*"
+openai = ">=1.0.0"
+pandas = "*"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "*"
+ruff = "*"
+black = "*"
+pytest = "*"
+
 [tool.ruff]
 line-length = 120
 target-version = "py311"
